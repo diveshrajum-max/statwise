@@ -1,0 +1,1990 @@
+.graphical-summary-page {
+  min-height: 100vh;
+  background: #f7f9fc;
+}
+
+.graphical-summary-content {
+  min-height: 100vh;
+
+  margin-left: 325px;
+
+  padding:
+    95px
+    28px
+    45px;
+
+  transition:
+    margin-left 0.25s ease;
+}
+
+/* Page heading */
+
+.graphical-summary-heading {
+  margin-bottom: 30px;
+}
+
+.graphical-summary-heading h1 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 38px;
+  font-weight: 750;
+
+  letter-spacing: -0.8px;
+}
+
+.graphical-summary-heading p {
+  margin:
+    8px
+    0
+    0;
+
+  color: #58709b;
+
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Analysis configuration */
+
+.graphical-configuration-card {
+  padding: 30px;
+
+  background: #ffffff;
+
+  border:
+    1px
+    solid
+    #dfe4eb;
+
+  border-radius: 17px;
+
+  box-shadow:
+    0
+    5px
+    18px
+    rgba(
+      16,
+      24,
+      40,
+      0.04
+    );
+}
+
+.graphical-configuration-card h2 {
+  margin:
+    0
+    0
+    28px;
+
+  color: #101828;
+
+  font-size: 23px;
+}
+
+/* Dataset and variable selectors */
+
+.graphical-selection-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap: 30px;
+
+  margin-bottom: 28px;
+}
+
+.graphical-input-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.graphical-input-group label {
+  color: #101828;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+.graphical-input-group select {
+  width: 100%;
+
+  height: 55px;
+
+  padding:
+    0
+    16px;
+
+  color: #101828;
+
+  font-size: 16px;
+
+  background: #ffffff;
+
+  border:
+    1px
+    solid
+    #d8dee8;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.graphical-input-group
+select:hover {
+  border-color: #8da3cf;
+}
+
+.graphical-input-group
+select:focus {
+  border-color: #3158b8;
+
+  box-shadow:
+    0
+    0
+    0
+    3px
+    rgba(
+      49,
+      88,
+      184,
+      0.12
+    );
+}
+
+.graphical-input-group
+select:disabled {
+  color: #a8b2c3;
+
+  background: #f4f6f9;
+
+  cursor: not-allowed;
+}
+
+/* Generate button */
+
+.generate-summary-button {
+  width: 100%;
+
+  min-height: 49px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  color: #ffffff;
+
+  background: #29479c;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 11px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.generate-summary-button:hover {
+  background: #203b88;
+
+  transform:
+    translateY(
+      -1px
+    );
+}
+
+.generate-summary-button:disabled {
+  color: #ffffff;
+
+  background: #9aaad0;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+/* Empty analysis state */
+
+.graphical-empty-card {
+  min-height: 390px;
+
+  margin-top: 28px;
+
+  padding: 45px;
+
+  background: #ffffff;
+
+  border:
+    1px
+    solid
+    #dfe4eb;
+
+  border-radius: 17px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  box-shadow:
+    0
+    5px
+    18px
+    rgba(
+      16,
+      24,
+      40,
+      0.035
+    );
+}
+
+.graphical-empty-icon {
+  width: 95px;
+
+  height: 95px;
+
+  margin-bottom: 23px;
+
+  color: #64748b;
+
+  background: #edf2f8;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.graphical-empty-card h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 23px;
+}
+
+.graphical-empty-card p {
+  max-width: 600px;
+
+  margin:
+    17px
+    0
+    0;
+
+  color: #58709b;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+/* Dark mode */
+
+html.dark
+.graphical-summary-page,
+html.dark
+.graphical-summary-content {
+  background: #101828;
+}
+
+html.dark
+.graphical-summary-heading h1,
+html.dark
+.graphical-configuration-card h2,
+html.dark
+.graphical-empty-card h2,
+html.dark
+.graphical-input-group label {
+  color: #ffffff;
+}
+
+html.dark
+.graphical-summary-heading p,
+html.dark
+.graphical-empty-card p {
+  color: #aebbd0;
+}
+
+html.dark
+.graphical-configuration-card,
+html.dark
+.graphical-empty-card {
+  background: #172033;
+
+  border-color: #344054;
+}
+
+html.dark
+.graphical-input-group select {
+  color: #ffffff;
+
+  background: #202c40;
+
+  border-color: #475467;
+}
+
+html.dark
+.graphical-input-group
+select:disabled {
+  color: #8d9bb0;
+
+  background: #182337;
+}
+
+html.dark
+.graphical-empty-icon {
+  color: #b8c4d8;
+
+  background: #26344c;
+}
+
+/* Tablet */
+
+@media (
+  max-width: 1100px
+) {
+  .graphical-summary-content {
+    margin-left: 0;
+
+    padding:
+      92px
+      20px
+      40px;
+  }
+}
+
+/* Mobile */
+
+@media (
+  max-width: 700px
+) {
+  .graphical-summary-content {
+    padding:
+      88px
+      14px
+      30px;
+  }
+
+  .graphical-summary-heading h1 {
+    font-size: 31px;
+  }
+
+  .graphical-summary-heading p {
+    font-size: 15px;
+  }
+
+  .graphical-configuration-card {
+    padding: 22px;
+  }
+
+  .graphical-selection-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 20px;
+  }
+
+  .graphical-empty-card {
+    min-height: 330px;
+
+    padding: 28px 20px;
+  }
+}
+.graphical-error-message {
+  margin-top: 18px;
+  padding: 14px 16px;
+
+  color: #b42318;
+  background: #fff1f0;
+
+  border: 1px solid #fda29b;
+  border-radius: 9px;
+
+  font-size: 14px;
+}
+
+html.dark
+.graphical-error-message {
+  color: #fda29b;
+  background: #3b1d22;
+  border-color: #7a2935;
+}
+/* Graphical result section */
+
+.graphical-results-section {
+  padding: 30px;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    #dce2ea;
+
+  border-radius: 18px;
+}
+
+
+/* Results heading */
+
+.graphical-results-heading {
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 20px;
+
+  margin-bottom: 28px;
+}
+
+
+.graphical-results-heading h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 25px;
+
+  font-weight: 700;
+}
+
+
+.graphical-results-heading p {
+  margin:
+    7px
+    0
+    0;
+
+  color: #58709b;
+
+  font-size: 16px;
+}
+
+
+/* Complete badge */
+
+.graphical-result-badge {
+  padding:
+    10px
+    15px;
+
+  border-radius: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #067647;
+
+  background:
+    #ecfdf3;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+/* Statistics grid */
+
+.graphical-statistics-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap: 18px;
+}
+
+
+/* Individual statistic */
+
+.graphical-stat-card {
+  min-height: 125px;
+
+  padding: 23px;
+
+  border:
+    1px solid
+    #dce2ea;
+
+  border-radius: 15px;
+
+  background:
+    #ffffff;
+
+  display: flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    space-between;
+
+  transition:
+    transform
+    0.2s ease,
+    box-shadow
+    0.2s ease;
+}
+
+
+.graphical-stat-card:hover {
+  transform:
+    translateY(
+      -3px
+    );
+
+  box-shadow:
+    0
+    9px
+    22px
+    rgba(
+      16,
+      24,
+      40,
+      0.08
+    );
+}
+
+
+.graphical-stat-card span {
+  color: #58709b;
+
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+
+.graphical-stat-card strong {
+  color: #101828;
+
+  font-size: 29px;
+
+  font-weight: 750;
+}
+
+
+/* Tablet */
+
+@media (
+  max-width:
+    1050px
+) {
+  .graphical-statistics-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+  }
+}
+
+
+/* Mobile */
+
+@media (
+  max-width:
+    650px
+) {
+  .graphical-results-heading {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+  }
+
+
+  .graphical-statistics-grid {
+    grid-template-columns:
+      1fr;
+  }
+}
+/* Histogram section */
+
+.histogram-section {
+  margin-top: 30px;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    #dce2ea;
+
+  border-radius: 16px;
+}
+
+
+/* Histogram heading */
+
+.histogram-heading {
+  display: flex;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    space-between;
+
+  gap: 20px;
+
+  margin-bottom: 30px;
+}
+
+
+.histogram-heading h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 23px;
+}
+
+
+.histogram-heading p {
+  margin:
+    7px
+    0
+    0;
+
+  color: #58709b;
+
+  font-size: 15px;
+}
+
+
+/* Mean badge */
+
+.histogram-mean {
+  padding:
+    9px
+    14px;
+
+  color: #244496;
+
+  background:
+    #eef3ff;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+}
+
+
+/* Complete chart */
+
+.histogram-chart {
+  height: 330px;
+
+  padding:
+    20px
+    15px
+    0;
+
+  display: flex;
+
+  align-items:
+    flex-end;
+
+  justify-content:
+    center;
+
+  gap: 5px;
+
+  border-left:
+    2px solid
+    #64748b;
+
+  border-bottom:
+    2px solid
+    #64748b;
+
+  background-image:
+    linear-gradient(
+      to top,
+      #edf1f6
+      1px,
+      transparent
+      1px
+    );
+
+  background-size:
+    100%
+    20%;
+}
+
+
+/* Individual histogram column */
+
+.histogram-column {
+  width: 70px;
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    flex-end;
+
+  align-items:
+    center;
+}
+
+
+/* Frequency number */
+
+.histogram-count {
+  height: 24px;
+
+  color: #344054;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* Bar area */
+
+.histogram-bar-area {
+  width: 100%;
+
+  height: 250px;
+
+  display: flex;
+
+  align-items:
+    flex-end;
+}
+
+
+/* Histogram bar */
+
+.histogram-bar {
+  width: 100%;
+
+  min-height: 2px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #2f62c9,
+      #244496
+    );
+
+  border:
+    1px solid
+    #17357b;
+
+  border-radius:
+    5px
+    5px
+    0
+    0;
+
+  transition:
+    height
+    0.5s ease;
+}
+
+
+.histogram-bar:hover {
+  opacity: 0.8;
+}
+
+
+/* X-axis values */
+
+.histogram-column span {
+  min-height: 35px;
+
+  padding-top: 8px;
+
+  color: #58709b;
+
+  font-size: 12px;
+}
+
+
+/* Variable name */
+
+.histogram-axis-title {
+  margin-top: 17px;
+
+  color: #101828;
+
+  text-align: center;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+/* Mobile */
+
+@media (
+  max-width:
+    700px
+) {
+  .histogram-heading {
+    flex-direction:
+      column;
+  }
+
+
+  .histogram-section {
+    padding: 18px;
+  }
+
+
+  .histogram-chart {
+    overflow-x: auto;
+
+    justify-content:
+      flex-start;
+  }
+
+
+  .histogram-column {
+    min-width: 55px;
+  }
+}
+/* Box plot section */
+
+.boxplot-section {
+  margin-top: 30px;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    #dce2ea;
+
+  border-radius: 16px;
+}
+
+
+/* Box plot heading */
+
+.boxplot-heading {
+  display: flex;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    space-between;
+
+  gap: 20px;
+
+  margin-bottom: 28px;
+}
+
+
+.boxplot-heading h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 23px;
+}
+
+
+.boxplot-heading p {
+  margin:
+    7px
+    0
+    0;
+
+  color: #58709b;
+
+  font-size: 15px;
+}
+
+
+/* IQR badge */
+
+.boxplot-iqr-badge {
+  padding:
+    9px
+    14px;
+
+  color: #244496;
+
+  background: #eef3ff;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+}
+
+
+/* Five-number values */
+
+.boxplot-value-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      5,
+      1fr
+    );
+
+  gap: 12px;
+
+  margin-bottom: 45px;
+}
+
+
+.boxplot-value-grid div {
+  padding: 14px;
+
+  text-align: center;
+
+  background: #f8fafc;
+
+  border:
+    1px solid
+    #e3e8ef;
+
+  border-radius: 11px;
+}
+
+
+.boxplot-value-grid span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #58709b;
+
+  font-size: 13px;
+}
+
+
+.boxplot-value-grid strong {
+  color: #101828;
+
+  font-size: 18px;
+}
+
+
+/* Box plot chart */
+
+.boxplot-chart {
+  min-height: 190px;
+
+  padding:
+    45px
+    8%;
+
+  display: flex;
+
+  align-items: center;
+
+  background:
+    #fbfcfe;
+
+  border-radius: 13px;
+}
+
+
+/* Complete horizontal plot */
+
+.boxplot-line {
+  width: 100%;
+
+  height: 95px;
+
+  display: flex;
+
+  align-items: center;
+}
+
+
+/* End caps */
+
+.boxplot-minimum-cap,
+.boxplot-maximum-cap {
+  width: 4px;
+
+  height: 70px;
+
+  background: #244496;
+
+  border-radius: 3px;
+}
+
+
+/* Whiskers */
+
+.boxplot-left-whisker,
+.boxplot-right-whisker {
+  flex: 1;
+
+  height: 4px;
+
+  background: #244496;
+}
+
+
+/* Quartile box */
+
+.boxplot-box {
+  position: relative;
+
+  width: 36%;
+
+  height: 95px;
+
+  background:
+    #dbe7ff;
+
+  border:
+    4px solid
+    #244496;
+
+  border-radius: 6px;
+}
+
+
+/* Median */
+
+.boxplot-median-line {
+  position: absolute;
+
+  top: -4px;
+
+  bottom: -4px;
+
+  left: 50%;
+
+  width: 5px;
+
+  transform:
+    translateX(
+      -50%
+    );
+
+  background:
+    #0f255f;
+}
+
+
+/* Variable */
+
+.boxplot-variable-name {
+  margin-top: 17px;
+
+  color: #101828;
+
+  text-align: center;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+/* Responsive */
+
+@media (
+  max-width:
+    700px
+) {
+  .boxplot-heading {
+    flex-direction:
+      column;
+  }
+
+
+  .boxplot-value-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+  }
+
+
+  .boxplot-section {
+    padding: 18px;
+  }
+
+
+  .boxplot-chart {
+    padding:
+      35px
+      3%;
+  }
+}
+/* Normality test */
+
+.normality-section {
+  margin-top: 30px;
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #dce2ea;
+  border-radius: 16px;
+}
+
+.normality-heading {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 27px;
+}
+
+.normality-heading h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 23px;
+}
+
+.normality-heading p {
+  margin: 7px 0 0;
+
+  color: #58709b;
+
+  font-size: 15px;
+}
+
+
+/* Normality status */
+
+.normality-status {
+  padding: 10px 15px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.normality-pass {
+  color: #067647;
+
+  background: #ecfdf3;
+
+  border: 1px solid #abefc6;
+}
+
+.normality-fail {
+  color: #b42318;
+
+  background: #fef3f2;
+
+  border: 1px solid #fecdca;
+}
+
+
+/* Test result cards */
+
+.normality-result-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap: 16px;
+}
+
+.normality-result-grid article {
+  min-height: 115px;
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  background: #f8fafc;
+
+  border: 1px solid #e3e8ef;
+
+  border-radius: 13px;
+}
+
+.normality-result-grid span {
+  color: #58709b;
+
+  font-size: 14px;
+}
+
+.normality-result-grid strong {
+  color: #101828;
+
+  font-size: 25px;
+}
+
+
+/* Hypotheses */
+
+.normality-hypothesis {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap: 16px;
+
+  margin-top: 22px;
+}
+
+.normality-hypothesis div {
+  padding: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e3e8ef;
+
+  border-radius: 12px;
+}
+
+.normality-hypothesis strong {
+  min-width: 43px;
+
+  color: #244496;
+
+  font-size: 20px;
+}
+
+.normality-hypothesis span {
+  color: #475467;
+
+  line-height: 1.5;
+}
+
+
+/* Statistical decision */
+
+.normality-decision {
+  margin-top: 22px;
+
+  padding: 20px;
+
+  border-radius: 13px;
+}
+
+.normality-decision h3 {
+  margin: 0 0 9px;
+
+  font-size: 17px;
+}
+
+.normality-decision p {
+  margin: 0;
+
+  line-height: 1.7;
+}
+
+.normality-decision-pass {
+  color: #05603a;
+
+  background: #ecfdf3;
+
+  border: 1px solid #abefc6;
+}
+
+.normality-decision-fail {
+  color: #912018;
+
+  background: #fef3f2;
+
+  border: 1px solid #fecdca;
+}
+
+
+/* Interpretation */
+
+.interpretation-section {
+  margin-top: 30px;
+
+  padding: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5f8ff,
+      #ffffff
+    );
+
+  border: 1px solid #cad7f3;
+
+  border-radius: 16px;
+}
+
+.interpretation-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 22px;
+}
+
+.interpretation-icon {
+  width: 48px;
+
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #ffffff;
+
+  background: #29479c;
+
+  border-radius: 12px;
+}
+
+.interpretation-heading h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 22px;
+}
+
+.interpretation-heading p {
+  margin: 5px 0 0;
+
+  color: #58709b;
+}
+
+.interpretation-content {
+  padding: 21px;
+
+  color: #344054;
+
+  background: #ffffff;
+
+  border: 1px solid #dce5f7;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* Responsive */
+
+@media (
+  max-width: 900px
+) {
+  .normality-result-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+  }
+}
+
+@media (
+  max-width: 650px
+) {
+  .normality-heading {
+    flex-direction: column;
+  }
+
+  .normality-result-grid,
+  .normality-hypothesis {
+    grid-template-columns:
+      1fr;
+  }
+
+  .normality-section,
+  .interpretation-section {
+    padding: 19px;
+  }
+}
+/* ==================================
+   NORMAL PROBABILITY / Q-Q PLOT
+================================== */
+
+.qq-plot-section {
+  margin-top: 30px;
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #dce2ea;
+  border-radius: 16px;
+}
+
+
+/* Header */
+
+.qq-plot-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 28px;
+}
+
+.qq-plot-header h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 25px;
+  font-weight: 750;
+}
+
+.qq-plot-header p {
+  margin: 8px 0 0;
+
+  color: #58709b;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* Normality status */
+
+.qq-status {
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 750;
+
+  white-space: nowrap;
+}
+
+.qq-status-normal {
+  color: #067647;
+
+  background: #ecfdf3;
+
+  border: 1px solid #86efac;
+}
+
+.qq-status-not-normal {
+  color: #b42318;
+
+  background: #fef3f2;
+
+  border: 1px solid #fecdca;
+}
+
+
+/* Graph and information layout */
+
+.qq-plot-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(
+      0,
+      1.55fr
+    )
+    minmax(
+      300px,
+      0.75fr
+    );
+
+  gap: 25px;
+
+  align-items: stretch;
+}
+
+
+/* Graph container */
+
+.qq-chart-container {
+  min-width: 0;
+
+  padding: 18px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #fbfcfe;
+
+  border: 1px solid #e3e8ef;
+  border-radius: 14px;
+
+  overflow: hidden;
+}
+
+.qq-chart {
+  display: block;
+
+  width: 100%;
+
+  max-width: 800px;
+
+  height: auto;
+
+  min-height: 430px;
+}
+
+
+/* Graph grid */
+
+.qq-grid-line {
+  stroke: #e5eaf1;
+
+  stroke-width: 1;
+}
+
+
+/* Graph axes */
+
+.qq-axis-line {
+  stroke: #344054;
+
+  stroke-width: 1.8;
+}
+
+.qq-axis-value {
+  fill: #667085;
+
+  font-size: 14px;
+
+  font-family:
+    inherit;
+}
+
+.qq-axis-title {
+  fill: #101828;
+
+  font-size: 16px;
+
+  font-weight: 650;
+
+  font-family:
+    inherit;
+}
+
+
+/* Orange normal reference line */
+
+.qq-reference-line {
+  stroke: #f97316;
+
+  stroke-width: 3;
+
+  stroke-dasharray:
+    10 7;
+
+  stroke-linecap: round;
+}
+
+
+/* Blue observed values */
+
+.qq-data-point {
+  fill: #287eb5;
+
+  stroke: #174d70;
+
+  stroke-width: 1.4;
+
+  cursor: pointer;
+
+  transition:
+    r 0.15s ease,
+    fill 0.15s ease;
+}
+
+.qq-data-point:hover {
+  fill: #175cd3;
+
+  r: 8;
+}
+
+
+/* Information card */
+
+.qq-information-card {
+  padding: 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #dce2ea;
+  border-radius: 14px;
+}
+
+.qq-information-card h3 {
+  margin:
+    0
+    0
+    22px;
+
+  color: #101828;
+
+  font-size: 20px;
+  font-weight: 750;
+}
+
+
+/* Information values */
+
+.qq-information-row {
+  padding:
+    15px
+    0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-bottom:
+    1px solid
+    #e8ecf2;
+}
+
+.qq-information-row span {
+  color: #58709b;
+
+  font-size: 15px;
+}
+
+.qq-information-row strong {
+  color: #101828;
+
+  font-size: 17px;
+
+  text-align: right;
+}
+
+
+/* Plot legend */
+
+.qq-legend {
+  margin-top: 24px;
+
+  padding: 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+  color: #475467;
+
+  background: #f8fafc;
+
+  border: 1px solid #e3e8ef;
+  border-radius: 11px;
+
+  font-size: 14px;
+}
+
+.qq-legend div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+/* Blue point */
+
+.qq-point-symbol {
+  width: 12px;
+
+  height: 12px;
+
+  flex-shrink: 0;
+
+  background: #287eb5;
+
+  border: 1px solid #174d70;
+
+  border-radius: 50%;
+}
+
+
+/* Orange dashed line */
+
+.qq-line-symbol {
+  width: 35px;
+
+  height: 0;
+
+  flex-shrink: 0;
+
+  border-top:
+    3px dashed
+    #f97316;
+}
+
+
+/* Visual interpretation */
+
+.qq-conclusion {
+  margin-top: 22px;
+
+  padding: 18px;
+
+  border-radius: 11px;
+}
+
+.qq-conclusion strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 15px;
+}
+
+.qq-conclusion p {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.qq-conclusion-normal {
+  color: #05603a;
+
+  background: #ecfdf3;
+
+  border: 1px solid #abefc6;
+}
+
+.qq-conclusion-not-normal {
+  color: #912018;
+
+  background: #fef3f2;
+
+  border: 1px solid #fecdca;
+}
+
+
+/* ==================================
+   DARK MODE
+================================== */
+
+html.dark
+.qq-plot-section {
+  background: #172033;
+
+  border-color: #344054;
+}
+
+html.dark
+.qq-plot-header h2 {
+  color: #ffffff;
+}
+
+html.dark
+.qq-plot-header p {
+  color: #aebbd0;
+}
+
+html.dark
+.qq-chart-container {
+  background: #101828;
+
+  border-color: #344054;
+}
+
+html.dark
+.qq-grid-line {
+  stroke: #344054;
+}
+
+html.dark
+.qq-axis-line {
+  stroke: #d0d5dd;
+}
+
+html.dark
+.qq-axis-value {
+  fill: #aebbd0;
+}
+
+html.dark
+.qq-axis-title {
+  fill: #ffffff;
+}
+
+html.dark
+.qq-information-card {
+  background: #202c40;
+
+  border-color: #475467;
+}
+
+html.dark
+.qq-information-card h3,
+html.dark
+.qq-information-row strong {
+  color: #ffffff;
+}
+
+html.dark
+.qq-information-row {
+  border-color: #475467;
+}
+
+html.dark
+.qq-information-row span {
+  color: #aebbd0;
+}
+
+html.dark
+.qq-legend {
+  color: #d0d5dd;
+
+  background: #172033;
+
+  border-color: #475467;
+}
+
+
+/* ==================================
+   RESPONSIVE DESIGN
+================================== */
+
+@media (
+  max-width: 1050px
+) {
+  .qq-plot-layout {
+    grid-template-columns:
+      1fr;
+  }
+
+  .qq-information-card {
+    width: auto;
+  }
+}
+
+
+@media (
+  max-width: 700px
+) {
+  .qq-plot-section {
+    padding: 20px;
+  }
+
+  .qq-plot-header {
+    flex-direction: column;
+  }
+
+  .qq-chart-container {
+    padding: 5px;
+  }
+
+  .qq-chart {
+    min-height: 330px;
+  }
+
+  .qq-information-card {
+    padding: 19px;
+  }
+}

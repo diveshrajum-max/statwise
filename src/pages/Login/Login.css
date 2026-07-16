@@ -1,0 +1,256 @@
+.login-page {
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    linear-gradient(
+      120deg,
+      #f8fafc 0%,
+      #eef2f8 50%,
+      #eaf5fc 100%
+    );
+  color: #101828;
+  position: relative;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 560px;
+  min-height: 770px;
+  padding: 40px;
+  border: 1px solid #dce1e8;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 22px 45px rgba(15, 23, 42, 0.16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-box {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  background: #263f94;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.25;
+  text-align: center;
+  color: #101828;
+}
+
+.company-name {
+  margin-top: 14px;
+  color: #58709b;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.login-form {
+  width: 100%;
+  margin-top: 66px;
+}
+
+.form-group {
+  margin-bottom: 34px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 13px;
+  color: #111827;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.input-container {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #64789c;
+  border-bottom: 1px solid transparent;
+}
+
+.input-container input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #172033;
+  font-size: 16px;
+}
+
+.input-container input::placeholder {
+  color: #64789c;
+}
+
+.input-container:focus-within {
+  border-bottom-color: #263f94;
+}
+
+.remember-container {
+  width: fit-content;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #111827;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.remember-container input {
+  width: 20px;
+  height: 20px;
+  accent-color: #263f94;
+}
+
+.sign-in-button {
+  width: 100%;
+  height: 46px;
+  margin-top: 31px;
+  border: none;
+  border-radius: 8px;
+  background: #263f94;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sign-in-button:hover {
+  background: #1d337e;
+}
+
+.sign-in-button:active {
+  transform: scale(0.99);
+}
+
+.demo-message {
+  width: 100%;
+  margin-top: 60px;
+  padding: 21px;
+  border: 1px solid #cfd6df;
+  border-radius: 10px;
+  background: #f1f4f8;
+  color: #58709b;
+  font-size: 14px;
+  text-align: center;
+}
+
+.theme-button {
+  width: 58px;
+  height: 58px;
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  z-index: 10;
+  border: 1px solid #d9dee7;
+  border-radius: 50%;
+  background: white;
+  color: #101828;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page footer {
+  position: absolute;
+  bottom: 15px;
+  color: #58709b;
+  font-size: 14px;
+}
+
+/* Dark mode */
+
+.login-page.dark {
+  background: linear-gradient(
+    120deg,
+    #0c1220,
+    #121a2b,
+    #142438
+  );
+}
+
+.dark .login-card {
+  border-color: #2c3850;
+  background: #172033;
+}
+
+.dark .login-card h1,
+.dark .form-group label,
+.dark .remember-container {
+  color: #f8fafc;
+}
+
+.dark .input-container input {
+  color: white;
+}
+
+.dark .theme-button {
+  border-color: #37445d;
+  background: #172033;
+  color: white;
+}
+
+.dark .demo-message {
+  border-color: #37445d;
+  background: #202b40;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .login-page {
+    padding: 18px;
+    align-items: flex-start;
+  }
+
+  .login-card {
+    min-height: auto;
+    margin-top: 65px;
+    padding: 30px 24px;
+  }
+
+  .login-card h1 {
+    font-size: 25px;
+  }
+
+  .login-form {
+    margin-top: 45px;
+  }
+
+  .theme-button {
+    width: 48px;
+    height: 48px;
+    top: 16px;
+    right: 16px;
+  }
+
+  .demo-message {
+    margin-top: 40px;
+  }
+
+  .login-page footer {
+    display: none;
+  }
+}

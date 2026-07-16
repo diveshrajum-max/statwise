@@ -1,0 +1,1626 @@
+/* ===================================
+   PROCESS CAPABILITY PAGE
+=================================== */
+
+.capability-page {
+  min-height: 100vh;
+
+  background: #f7f9fc;
+}
+
+
+/* ===================================
+   MAIN CONTENT
+=================================== */
+
+.capability-content {
+  min-height: 100vh;
+
+  margin-left: 325px;
+
+  padding:
+    100px
+    28px
+    60px;
+
+  background: #f7f9fc;
+}
+
+
+/* ===================================
+   PAGE HEADING
+=================================== */
+
+.capability-heading {
+  margin-bottom: 28px;
+}
+
+
+.capability-heading h1 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 38px;
+
+  font-weight: 750;
+
+  line-height: 1.15;
+}
+
+
+.capability-heading p {
+  margin:
+    10px
+    0
+    0;
+
+  color: #58709b;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+}
+
+
+/* ===================================
+   CONFIGURATION CARD
+=================================== */
+
+.capability-configuration-card {
+  padding: 30px;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    #dce2ea;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0
+    4px
+    15px
+    rgba(
+      16,
+      24,
+      40,
+      0.04
+    );
+}
+
+
+/* ===================================
+   CONFIGURATION HEADING
+=================================== */
+
+.capability-card-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 30px;
+}
+
+
+.capability-heading-icon {
+  width: 50px;
+
+  height: 50px;
+
+  border-radius: 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #244496;
+
+  background: #eaf0ff;
+}
+
+
+.capability-card-heading h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 24px;
+
+  font-weight: 700;
+}
+
+
+.capability-card-heading p {
+  margin:
+    5px
+    0
+    0;
+
+  color: #667895;
+
+  font-size: 15px;
+}
+
+
+/* ===================================
+   DATASET SELECTION
+=================================== */
+
+.capability-selection-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap: 25px;
+
+  margin-bottom: 32px;
+}
+
+
+/* ===================================
+   INPUTS
+=================================== */
+
+.capability-input-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+.capability-input-group label {
+  color: #101828;
+
+  font-size: 15px;
+
+  font-weight: 650;
+}
+
+
+.capability-input-group select,
+.capability-input-group input {
+  width: 100%;
+
+  height: 56px;
+
+  padding:
+    0
+    17px;
+
+  box-sizing:
+    border-box;
+
+  color: #101828;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    #d5dce7;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 16px;
+
+  transition:
+    border-color
+      0.2s ease,
+    box-shadow
+      0.2s ease;
+}
+
+
+.capability-input-group select {
+  cursor: pointer;
+}
+
+
+.capability-input-group select:focus,
+.capability-input-group input:focus {
+  border-color:
+    #3155b7;
+
+  box-shadow:
+    0
+    0
+    0
+    3px
+    rgba(
+      49,
+      85,
+      183,
+      0.12
+    );
+}
+
+
+.capability-input-group select:disabled {
+  color: #a6b1c2;
+
+  background: #f4f6f9;
+
+  cursor:
+    not-allowed;
+}
+
+
+.capability-input-group input::placeholder {
+  color: #a6b1c2;
+}
+
+
+/* Remove number arrows */
+
+.capability-input-group
+input::-webkit-inner-spin-button,
+
+.capability-input-group
+input::-webkit-outer-spin-button {
+  margin: 0;
+
+  appearance: none;
+}
+
+
+/* ===================================
+   SPECIFICATION SECTION
+=================================== */
+
+.specification-heading {
+  display: flex;
+
+  align-items:
+    flex-start;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+
+  padding-top: 25px;
+
+  border-top:
+    1px solid
+    #e3e7ed;
+
+  color: #244496;
+}
+
+
+.specification-heading h3 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 19px;
+
+  font-weight: 700;
+}
+
+
+.specification-heading p {
+  margin:
+    5px
+    0
+    0;
+
+  color: #667895;
+
+  font-size: 14px;
+}
+
+
+.specification-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap: 22px;
+
+  margin-bottom: 28px;
+}
+
+
+/* ===================================
+   CALCULATE BUTTON
+=================================== */
+
+.calculate-capability-button {
+  width: 100%;
+
+  min-height: 55px;
+
+  padding:
+    13px
+    25px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  color: #ffffff;
+
+  background: #29489e;
+
+  font-family: inherit;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background
+      0.2s ease,
+    transform
+      0.2s ease,
+    box-shadow
+      0.2s ease;
+}
+
+
+.calculate-capability-button:hover:not(
+  :disabled
+) {
+  background: #203c8a;
+
+  box-shadow:
+    0
+    8px
+    18px
+    rgba(
+      41,
+      72,
+      158,
+      0.2
+    );
+
+  transform:
+    translateY(
+      -1px
+    );
+}
+
+
+.calculate-capability-button:disabled {
+  color: #ffffff;
+
+  background: #9aaad2;
+
+  cursor:
+    not-allowed;
+
+  opacity: 0.75;
+}
+
+
+/* ===================================
+   ERROR MESSAGE
+=================================== */
+
+.capability-error-message {
+  margin-top: 18px;
+
+  padding:
+    14px
+    17px;
+
+  color: #c62828;
+
+  background: #fff1f1;
+
+  border:
+    1px solid
+    #ffb9b9;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+}
+
+
+/* ===================================
+   EMPTY RESULTS
+=================================== */
+
+.capability-empty-card {
+  min-height: 340px;
+
+  margin-top: 28px;
+
+  padding: 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    #dce2ea;
+
+  border-radius: 18px;
+}
+
+
+.capability-empty-icon {
+  width: 105px;
+
+  height: 105px;
+
+  margin-bottom: 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #687b99;
+
+  background: #edf2f9;
+
+  border-radius: 50%;
+}
+
+
+.capability-empty-card h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 25px;
+
+  font-weight: 700;
+}
+
+
+.capability-empty-card p {
+  max-width: 650px;
+
+  margin:
+    15px
+    0
+    0;
+
+  color: #617595;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* ===================================
+   READY RESULTS
+=================================== */
+
+.capability-ready-card {
+  min-height: 300px;
+
+  margin-top: 28px;
+
+  padding: 42px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f4fff8,
+      #ffffff
+    );
+
+  border:
+    1px solid
+    #9be8ba;
+
+  border-radius: 18px;
+}
+
+
+.capability-ready-icon {
+  width: 90px;
+
+  height: 90px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #16a65b;
+
+  background: #e7f9ee;
+
+  border-radius: 50%;
+}
+
+
+.capability-ready-card h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 26px;
+}
+
+
+.capability-ready-card > p {
+  margin:
+    13px
+    0
+    0;
+
+  color: #58709b;
+
+  font-size: 17px;
+}
+
+
+.capability-ready-details {
+  margin-top: 25px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 14px;
+}
+
+
+.capability-ready-details span {
+  min-height: 44px;
+
+  padding:
+    0
+    17px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #486184;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    #d7e3dc;
+
+  border-radius: 9px;
+}
+
+
+.capability-ready-details strong {
+  color: #101828;
+}
+
+
+/* ===================================
+   DARK MODE
+=================================== */
+
+html.dark
+.capability-page,
+
+html.dark
+.capability-content {
+  background: #101828;
+}
+
+
+html.dark
+.capability-heading h1 {
+  color: #ffffff;
+}
+
+
+html.dark
+.capability-heading p {
+  color: #aebbd0;
+}
+
+
+html.dark
+.capability-configuration-card,
+
+html.dark
+.capability-empty-card,
+
+html.dark
+.capability-ready-card {
+  background: #172033;
+
+  border-color: #344054;
+}
+
+
+html.dark
+.capability-card-heading h2,
+
+html.dark
+.specification-heading h3,
+
+html.dark
+.capability-input-group label,
+
+html.dark
+.capability-empty-card h2,
+
+html.dark
+.capability-ready-card h2 {
+  color: #ffffff;
+}
+
+
+html.dark
+.capability-card-heading p,
+
+html.dark
+.specification-heading p,
+
+html.dark
+.capability-empty-card p,
+
+html.dark
+.capability-ready-card > p {
+  color: #aebbd0;
+}
+
+
+html.dark
+.capability-input-group select,
+
+html.dark
+.capability-input-group input {
+  color: #ffffff;
+
+  background: #202c40;
+
+  border-color: #475467;
+}
+
+
+html.dark
+.capability-input-group select:disabled {
+  color: #8391a7;
+
+  background: #192438;
+}
+
+
+html.dark
+.specification-heading {
+  border-color: #344054;
+}
+
+
+html.dark
+.capability-ready-details span {
+  color: #aebbd0;
+
+  background: #202c40;
+
+  border-color: #475467;
+}
+
+
+html.dark
+.capability-ready-details strong {
+  color: #ffffff;
+}
+
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (
+  max-width: 1100px
+) {
+
+  .capability-content {
+    margin-left: 0;
+
+    padding:
+      95px
+      20px
+      50px;
+  }
+
+
+  .specification-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+  }
+
+}
+
+
+@media (
+  max-width: 750px
+) {
+
+  .capability-content {
+    padding:
+      85px
+      14px
+      40px;
+  }
+
+
+  .capability-heading h1 {
+    font-size: 29px;
+  }
+
+
+  .capability-heading p {
+    font-size: 15px;
+  }
+
+
+  .capability-configuration-card {
+    padding: 21px;
+  }
+
+
+  .capability-selection-grid,
+
+  .specification-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .capability-ready-details {
+    flex-direction:
+      column;
+
+    width: 100%;
+  }
+
+
+  .capability-ready-details span {
+    justify-content:
+      center;
+  }
+
+}
+/* ==================================================
+   PROCESS CAPABILITY RESULTS
+================================================== */
+
+.capability-results-section {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 30px;
+}
+
+
+/* ==================================================
+   OVERALL PROCESS STATUS
+================================================== */
+
+.capability-status-card {
+  width: 100%;
+  padding: 28px 32px;
+
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  background: #eef9f3;
+
+  border: 2px solid #18a558;
+  border-radius: 18px;
+
+  box-sizing: border-box;
+}
+
+.capability-status-icon {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #18a558;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+}
+
+.capability-status-card span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #18864c;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.1px;
+}
+
+.capability-status-card h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 25px;
+  font-weight: 750;
+}
+
+.capability-status-card p {
+  margin: 8px 0 0;
+
+  color: #58709b;
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* Status colours */
+
+.capability-status-card.excellent {
+  background: #edf9f2;
+  border-color: #18a558;
+}
+
+.capability-status-card.excellent
+.capability-status-icon {
+  color: #18a558;
+}
+
+.capability-status-card.adequate {
+  background: #eff8ff;
+  border-color: #2e90fa;
+}
+
+.capability-status-card.adequate
+.capability-status-icon {
+  color: #1570ef;
+}
+
+.capability-status-card.marginal {
+  background: #fff8e8;
+  border-color: #f59e0b;
+}
+
+.capability-status-card.marginal
+.capability-status-icon {
+  color: #f59e0b;
+}
+
+.capability-status-card.inadequate {
+  background: #fff1f2;
+  border-color: #ef4444;
+}
+
+.capability-status-card.inadequate
+.capability-status-icon {
+  color: #ef4444;
+}
+
+
+/* ==================================================
+   MAIN TWO-COLUMN RESULT LAYOUT
+================================================== */
+
+.capability-results-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(390px, 0.85fr);
+
+  align-items: start;
+
+  gap: 28px;
+}
+
+.capability-results-left,
+.capability-results-right {
+  display: flex;
+  flex-direction: column;
+
+  gap: 28px;
+
+  min-width: 0;
+}
+
+
+/* ==================================================
+   GENERAL RESULT CARDS
+================================================== */
+
+.capability-result-card {
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #dce2ea;
+  border-radius: 18px;
+
+  box-shadow:
+    0 2px 5px
+    rgba(16, 24, 40, 0.025);
+
+  box-sizing: border-box;
+}
+
+.result-card-title {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 26px;
+}
+
+.result-card-title h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 22px;
+  font-weight: 750;
+}
+
+.result-card-title p {
+  margin: 7px 0 0;
+
+  color: #66799d;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.result-title-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #244496;
+
+  background: #edf2ff;
+
+  border-radius: 13px;
+}
+
+
+/* ==================================================
+   PROCESS DISTRIBUTION GRAPH PLACEHOLDER
+================================================== */
+
+.process-chart-card {
+  min-height: 490px;
+}
+
+.process-chart-placeholder {
+  min-height: 340px;
+
+  padding: 35px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #64748b;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fafcff 0%,
+      #f6f8fc 100%
+    );
+
+  border: 1px dashed #bdc8d8;
+  border-radius: 15px;
+
+  box-sizing: border-box;
+}
+
+.process-chart-placeholder svg {
+  margin-bottom: 20px;
+
+  color: #244496;
+}
+
+.process-chart-placeholder h3 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 20px;
+}
+
+.process-chart-placeholder p {
+  max-width: 410px;
+
+  margin: 11px auto 0;
+
+  color: #66799d;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* ==================================================
+   PROCESS STATISTICS
+================================================== */
+
+.process-statistics-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+.process-statistics-grid > div {
+  min-height: 110px;
+
+  padding: 19px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  background: #f7f9fc;
+
+  border: 1px solid #e1e7ef;
+  border-radius: 13px;
+
+  box-sizing: border-box;
+}
+
+.process-statistics-grid span {
+  color: #58709b;
+
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.process-statistics-grid strong {
+  margin-top: 15px;
+
+  color: #101828;
+
+  font-size: 24px;
+  font-weight: 750;
+}
+
+
+/* ==================================================
+   CAPABILITY INDICES
+================================================== */
+
+.capability-indices-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.capability-index-card {
+  min-height: 150px;
+
+  padding: 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid transparent;
+  border-radius: 15px;
+
+  box-sizing: border-box;
+}
+
+.capability-index-card span {
+  color: #344054;
+
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.capability-index-card small {
+  min-height: 38px;
+
+  margin-top: 6px;
+
+  color: #66799d;
+
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.capability-index-card strong {
+  margin-top: auto;
+
+  color: #101828;
+
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.cp-index {
+  background: #edf2ff;
+
+  border-color: #d6e0ff;
+}
+
+.cp-index strong {
+  color: #244496;
+}
+
+.cpk-index {
+  background: #eaf8f0;
+
+  border-color: #ccefdc;
+}
+
+.cpk-index strong {
+  color: #0b9f54;
+}
+
+.pp-index {
+  background: #ebf8ff;
+
+  border-color: #cdeeff;
+}
+
+.pp-index strong {
+  color: #0796d8;
+}
+
+.ppk-index {
+  background: #f1f4f9;
+
+  border-color: #dce3ed;
+}
+
+.ppk-index strong {
+  color: #172b4d;
+}
+
+
+/* ==================================================
+   ESTIMATED PROCESS PERFORMANCE
+================================================== */
+
+.performance-results-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+.performance-results-grid > div {
+  min-height: 105px;
+
+  padding: 19px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  background: #f8fafc;
+
+  border: 1px solid #e1e7ef;
+  border-radius: 13px;
+
+  box-sizing: border-box;
+}
+
+.performance-results-grid span {
+  color: #58709b;
+
+  font-size: 13px;
+}
+
+.performance-results-grid strong {
+  margin-top: 14px;
+
+  color: #101828;
+
+  font-size: 23px;
+}
+
+.performance-results-grid
+.yield-value {
+  color: #0b9f54;
+}
+
+
+/* ==================================================
+   CAPABILITY INTERPRETATION
+================================================== */
+
+.capability-interpretation-card {
+  padding: 32px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eff8ff 0%,
+      #f8fbff 100%
+    );
+
+  border: 1px solid #84d5ff;
+  border-radius: 18px;
+
+  box-sizing: border-box;
+}
+
+.interpretation-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-bottom: 26px;
+}
+
+.interpretation-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #ffffff;
+
+  background: #244496;
+
+  border-radius: 13px;
+}
+
+.interpretation-heading h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 22px;
+}
+
+.interpretation-heading p {
+  margin: 5px 0 0;
+
+  color: #58709b;
+
+  font-size: 14px;
+}
+
+
+/* Capability benchmarks */
+
+.capability-benchmark-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-bottom: 22px;
+}
+
+.capability-benchmark-grid > div {
+  min-height: 75px;
+
+  padding: 15px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  border-radius: 11px;
+}
+
+.capability-benchmark-grid span {
+  color: #344054;
+
+  font-size: 13px;
+}
+
+.capability-benchmark-grid strong {
+  margin-top: 6px;
+
+  font-size: 15px;
+}
+
+.excellent-benchmark {
+  background: #dff5e8;
+}
+
+.excellent-benchmark strong {
+  color: #079455;
+}
+
+.adequate-benchmark {
+  background: #e4f2ff;
+}
+
+.adequate-benchmark strong {
+  color: #1570ef;
+}
+
+.marginal-benchmark {
+  background: #fff4d8;
+}
+
+.marginal-benchmark strong {
+  color: #dc8600;
+}
+
+.inadequate-benchmark {
+  background: #ffe5e8;
+}
+
+.inadequate-benchmark strong {
+  color: #e02d3c;
+}
+
+
+/* Process assessment */
+
+.capability-assessment-box {
+  padding: 23px;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.82
+  );
+
+  border: 1px solid #d7e3ee;
+  border-radius: 13px;
+}
+
+.capability-assessment-box h3 {
+  margin: 0 0 13px;
+
+  color: #101828;
+
+  font-size: 17px;
+}
+
+.capability-assessment-box p {
+  margin: 8px 0;
+
+  color: #344054;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* ==================================================
+   RESPONSIVE LAYOUT
+================================================== */
+
+@media (
+  max-width: 1150px
+) {
+
+  .capability-results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-benchmark-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+}
+
+
+@media (
+  max-width: 760px
+) {
+
+  .capability-status-card {
+    padding: 23px;
+
+    align-items: flex-start;
+  }
+
+  .capability-status-card h2 {
+    font-size: 21px;
+  }
+
+  .capability-result-card,
+  .capability-interpretation-card {
+    padding: 21px;
+  }
+
+  .process-statistics-grid,
+  .capability-indices-grid,
+  .performance-results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-benchmark-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (
+  max-width: 500px
+) {
+
+  .capability-status-card {
+    flex-direction: column;
+  }
+
+  .result-card-title {
+    flex-direction: column;
+  }
+
+}
+/* ==========================================
+   PROCESS DISTRIBUTION GRAPH
+========================================== */
+
+.process-distribution-chart {
+  width: 100%;
+
+  height: 430px;
+
+  margin-top: 25px;
+
+  padding: 12px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7ef;
+
+  border-radius: 14px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* DARK MODE */
+
+html.dark
+.process-distribution-chart {
+  background: #202c40;
+
+  border-color: #475467;
+}
+
+
+/* TABLET */
+
+@media (
+  max-width: 900px
+) {
+
+  .process-distribution-chart {
+    height: 390px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (
+  max-width: 600px
+) {
+
+  .process-distribution-chart {
+    height: 350px;
+
+    padding: 5px;
+  }
+
+}

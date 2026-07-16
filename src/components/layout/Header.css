@@ -1,0 +1,295 @@
+/* ========================================
+   MAIN HEADER
+======================================== */
+
+.main-header {
+  position: fixed;
+
+  top: 0;
+  left: 325px;
+  right: 0;
+
+  height: 65px;
+
+  padding: 0 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e1e5eb;
+
+  z-index: 900;
+
+  transition:
+    left 0.3s ease,
+    background 0.2s ease;
+}
+
+
+/* ========================================
+   LEFT SIDE
+======================================== */
+
+.header-left {
+  display: flex;
+
+  align-items: center;
+
+  min-width: 0;
+}
+
+
+/* ========================================
+   MENU / X BUTTON
+======================================== */
+
+.header-menu-button {
+  width: 42px;
+  height: 42px;
+
+  margin-right: 20px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #101828;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.header-menu-button:hover {
+  background: #eef2f7;
+
+  color: #244496;
+}
+
+.header-menu-button svg {
+  display: block;
+
+  width: 25px;
+
+  height: 25px;
+}
+
+
+/* ========================================
+   PAGE TITLE
+======================================== */
+
+.header-left h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+.header-left p {
+  margin: 4px 0 0;
+
+  color: #58709b;
+
+  font-size: 13px;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+
+/* ========================================
+   DARK-MODE BUTTON
+======================================== */
+
+.theme-toggle-button {
+  width: 43px;
+
+  height: 43px;
+
+  padding: 0;
+
+  margin-left: auto;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #101828;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.theme-toggle-button:hover {
+  background: #eef2f7;
+
+  color: #244496;
+}
+
+
+/* ========================================
+   SIDEBAR CLOSED
+======================================== */
+
+html.sidebar-closed .main-header {
+  left: 0;
+}
+
+
+/* ========================================
+   GLOBAL DARK MODE
+======================================== */
+
+html.dark body {
+  background: #101828;
+
+  color: #f8fafc;
+}
+
+html.dark .main-header {
+  background: #172033;
+
+  border-color: #344054;
+}
+
+html.dark .header-left h2 {
+  color: #ffffff;
+}
+
+html.dark .header-left p {
+  color: #aebbd0;
+}
+
+html.dark .header-menu-button,
+html.dark .theme-toggle-button {
+  color: #ffffff;
+}
+
+html.dark .header-menu-button:hover,
+html.dark .theme-toggle-button:hover {
+  background: #29364d;
+}
+
+
+/* ========================================
+   MANAGE DATASETS DARK MODE
+======================================== */
+
+html.dark .manage-datasets-page,
+html.dark .manage-datasets-content {
+  background: #101828;
+}
+
+html.dark .manage-datasets-heading h1 {
+  color: #ffffff;
+}
+
+html.dark .manage-datasets-heading p {
+  color: #aebbd0;
+}
+
+html.dark .dataset-summary-card,
+html.dark .dataset-filter-card,
+html.dark .dataset-list-card {
+  background: #172033;
+
+  border-color: #344054;
+}
+
+html.dark .dataset-summary-card strong,
+html.dark .dataset-list-heading h2 {
+  color: #ffffff;
+}
+
+html.dark .dataset-summary-card span,
+html.dark .dataset-list-heading p {
+  color: #aebbd0;
+}
+
+html.dark .dataset-search-box,
+html.dark .dataset-filter-select {
+  background: #202c40;
+
+  border-color: #475467;
+}
+
+html.dark .dataset-search-box input,
+html.dark .dataset-filter-select select {
+  color: #ffffff;
+}
+
+html.dark
+  .dataset-search-box
+  input::placeholder {
+  color: #98a6bb;
+}
+
+html.dark .empty-dataset-library h3 {
+  color: #ffffff;
+}
+
+html.dark .empty-dataset-library p {
+  color: #aebbd0;
+}
+
+
+/* ========================================
+   SMALL SCREENS
+======================================== */
+
+@media (max-width: 700px) {
+  .main-header {
+    left: 0;
+
+    padding: 0 10px;
+  }
+
+  .header-menu-button {
+    margin-right: 8px;
+  }
+
+  .header-left p {
+    max-width: 210px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+  }
+}

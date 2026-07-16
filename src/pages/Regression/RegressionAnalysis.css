@@ -1,0 +1,1633 @@
+/* ========================================
+   REGRESSION PAGE
+======================================== */
+
+.regression-page {
+  min-height: 100vh;
+
+  background:
+    #f6f8fc;
+}
+
+
+.regression-content {
+  margin-left: 330px;
+
+  width: calc(100% - 330px);
+
+  padding:
+    105px
+    30px
+    50px;
+
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   PAGE HEADING
+======================================== */
+
+.regression-heading {
+  margin-bottom: 24px;
+}
+
+
+.regression-heading h1 {
+  margin: 0;
+
+  color: #071a3d;
+
+  font-size: 32px;
+  font-weight: 750;
+}
+
+
+.regression-heading p {
+  margin:
+    8px
+    0
+    0;
+
+  color: #5871a3;
+
+  font-size: 16px;
+}
+
+
+/* ========================================
+   CONFIGURATION CARD
+======================================== */
+
+.regression-configuration-card {
+  padding: 28px;
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid
+    #dce3ee;
+
+  border-radius:
+    18px;
+
+  box-shadow:
+    0 4px 15px
+    rgba(
+      18,
+      43,
+      84,
+      0.05
+    );
+}
+
+
+.regression-configuration-card h2 {
+  margin:
+    0
+    0
+    14px;
+
+  color: #0b1d3a;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+/* ========================================
+   REGRESSION TYPE TABS
+======================================== */
+
+.regression-type-tabs {
+  display: flex;
+
+  width:
+    min(
+      100%,
+      460px
+    );
+
+  padding: 5px;
+
+  background:
+    #e8edf5;
+
+  border-radius:
+    12px;
+}
+
+
+.regression-type-tabs button {
+  flex: 1;
+
+  padding:
+    11px
+    18px;
+
+  background:
+    transparent;
+
+  border: none;
+
+  border-radius:
+    9px;
+
+  color:
+    #243a63;
+
+  font-size:
+    15px;
+
+  font-weight:
+    650;
+
+  cursor:
+    pointer;
+
+  transition:
+    0.2s ease;
+}
+
+
+.regression-type-tabs button.active {
+  background:
+    #ffffff;
+
+  color:
+    #102b67;
+
+  box-shadow:
+    0 2px 8px
+    rgba(
+      30,
+      59,
+      115,
+      0.12
+    );
+}
+
+
+.regression-description {
+  margin:
+    14px
+    0
+    28px;
+
+  color:
+    #647aa7;
+
+  font-size:
+    15px;
+}
+
+
+/* ========================================
+   SELECTION FIELDS
+======================================== */
+
+.regression-selection-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap: 28px;
+}
+
+
+.predictor-heading {
+  margin-top:
+    28px !important;
+}
+
+
+.predictor-selection-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap: 28px;
+}
+
+
+.regression-selection-grid label,
+.predictor-selection-grid label {
+  display: flex;
+
+  flex-direction:
+    column;
+
+  gap: 10px;
+}
+
+
+.regression-selection-grid label > span,
+.predictor-selection-grid label > span {
+  color:
+    #13284b;
+
+  font-size:
+    15px;
+
+  font-weight:
+    700;
+}
+
+
+.regression-selection-grid select,
+.predictor-selection-grid select {
+  width:
+    100%;
+
+  height:
+    54px;
+
+  padding:
+    0
+    16px;
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid
+    #ccd6e5;
+
+  border-radius:
+    10px;
+
+  color:
+    #172a4b;
+
+  font-size:
+    15px;
+
+  outline:
+    none;
+
+  cursor:
+    pointer;
+
+  transition:
+    border-color
+    0.2s ease,
+    box-shadow
+    0.2s ease;
+}
+
+
+.regression-selection-grid select:focus,
+.predictor-selection-grid select:focus {
+  border-color:
+    #3159b5;
+
+  box-shadow:
+    0 0 0
+    3px
+    rgba(
+      49,
+      89,
+      181,
+      0.12
+    );
+}
+
+
+.regression-selection-grid select:disabled,
+.predictor-selection-grid select:disabled {
+  background:
+    #f4f6fa;
+
+  color:
+    #9aa9c1;
+
+  cursor:
+    not-allowed;
+}
+
+
+/* ========================================
+   ANALYSIS BUTTON
+======================================== */
+
+.perform-regression-button {
+  display: flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap: 10px;
+
+  min-width:
+    285px;
+
+  margin-top:
+    30px;
+
+  padding:
+    14px
+    24px;
+
+  background:
+    #24499e;
+
+  border:
+    none;
+
+  border-radius:
+    9px;
+
+  color:
+    #ffffff;
+
+  font-size:
+    15px;
+
+  font-weight:
+    700;
+
+  cursor:
+    pointer;
+
+  transition:
+    transform
+    0.2s ease,
+    background
+    0.2s ease;
+}
+
+
+.perform-regression-button:hover:not(
+  :disabled
+) {
+  background:
+    #193d91;
+
+  transform:
+    translateY(
+      -1px
+    );
+}
+
+
+.perform-regression-button:disabled {
+  background:
+    #aab9d9;
+
+  cursor:
+    not-allowed;
+}
+
+
+/* ========================================
+   ERROR
+======================================== */
+
+.regression-error {
+  margin:
+    22px
+    0
+    0;
+
+  padding:
+    15px
+    18px;
+
+  background:
+    #fff1f1;
+
+  border:
+    1px solid
+    #ffb8b8;
+
+  border-radius:
+    9px;
+
+  color:
+    #c52d2d;
+
+  font-size:
+    14px;
+}
+
+
+/* ========================================
+   EMPTY RESULTS
+======================================== */
+
+.regression-empty-card {
+  display: flex;
+
+  min-height:
+    340px;
+
+  margin-top:
+    28px;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  padding:
+    40px;
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid
+    #dce3ee;
+
+  border-radius:
+    18px;
+
+  color:
+    #7b8eae;
+
+  text-align:
+    center;
+
+  box-shadow:
+    0 4px 15px
+    rgba(
+      18,
+      43,
+      84,
+      0.04
+    );
+}
+
+
+.regression-empty-card svg {
+  margin-bottom:
+    20px;
+
+  color:
+    #7489ab;
+}
+
+
+.regression-empty-card h2 {
+  margin:
+    0;
+
+  color:
+    #10213e;
+
+  font-size:
+    24px;
+}
+
+
+.regression-empty-card p {
+  max-width:
+    480px;
+
+  margin:
+    12px
+    0
+    0;
+
+  color:
+    #687da5;
+
+  font-size:
+    15px;
+
+  line-height:
+    1.7;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (
+  max-width:
+    1000px
+) {
+
+  .regression-selection-grid,
+  .predictor-selection-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+}
+
+
+@media (
+  max-width:
+    760px
+) {
+
+  .regression-content {
+    margin-left:
+      0;
+
+    padding:
+      95px
+      16px
+      35px;
+  }
+
+
+  .regression-type-tabs {
+    flex-direction:
+      column;
+  }
+
+
+  .perform-regression-button {
+    width:
+      100%;
+
+    min-width:
+      0;
+  }
+
+}
+/* ========================================
+   REGRESSION EQUATION RESULTS
+======================================== */
+
+.regression-equation-card {
+  margin-top: 28px;
+
+  padding: 30px;
+
+  background:
+    #eef3f8;
+
+  border:
+    1px solid
+    #d4deea;
+
+  border-radius:
+    16px;
+
+  box-shadow:
+    0 3px 12px
+    rgba(
+      15,
+      38,
+      77,
+      0.04
+    );
+}
+
+
+.regression-equation-heading {
+  display: flex;
+
+  align-items:
+    flex-start;
+
+  gap: 18px;
+}
+
+
+.regression-equation-heading svg {
+  margin-top: 3px;
+
+  color:
+    #284b9b;
+}
+
+
+.regression-equation-heading h2 {
+  margin: 0;
+
+  color:
+    #10213e;
+
+  font-size:
+    22px;
+}
+
+
+.regression-equation-heading p {
+  margin:
+    15px
+    0
+    0;
+
+  color:
+    #15233e;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size:
+    22px;
+
+  font-weight:
+    600;
+}
+
+
+.regression-summary-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap: 24px;
+
+  margin-top:
+    28px;
+}
+
+
+.regression-summary-grid article {
+  display: flex;
+
+  flex-direction:
+    column;
+
+  gap: 8px;
+}
+
+
+.regression-summary-grid span {
+  color:
+    #71809a;
+
+  font-size:
+    14px;
+}
+
+
+.regression-summary-grid strong {
+  color:
+    #10213e;
+
+  font-size:
+    25px;
+
+  font-weight:
+    750;
+}
+
+
+@media (
+  max-width:
+    800px
+) {
+
+  .regression-summary-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+}
+/* ========================================
+   REGRESSION COEFFICIENTS
+======================================== */
+
+.regression-coefficients-card {
+  margin-top: 28px;
+
+  padding: 30px;
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid
+    #dce3ee;
+
+  border-radius:
+    16px;
+
+  box-shadow:
+    0 4px 15px
+    rgba(
+      18,
+      43,
+      84,
+      0.04
+    );
+}
+
+
+.regression-coefficients-card h2 {
+  margin:
+    0
+    0
+    25px;
+
+  color:
+    #10213e;
+
+  font-size:
+    21px;
+
+  font-weight:
+    750;
+}
+
+
+.regression-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+
+.regression-coefficients-table {
+  width: 100%;
+
+  border-collapse:
+    collapse;
+}
+
+
+.regression-coefficients-table th {
+  padding:
+    15px
+    18px;
+
+  border-bottom:
+    1px solid
+    #dce3ee;
+
+  color:
+    #425575;
+
+  font-size:
+    14px;
+
+  font-weight:
+    700;
+
+  text-align:
+    left;
+}
+
+
+.regression-coefficients-table td {
+  padding:
+    18px;
+
+  border-bottom:
+    1px solid
+    #e8edf4;
+
+  color:
+    #243654;
+
+  font-size:
+    15px;
+}
+
+
+.regression-coefficients-table tbody tr:last-child td {
+  border-bottom:
+    none;
+}
+
+
+.regression-coefficients-table tbody tr:hover {
+  background:
+    #f8faff;
+}
+
+
+.regression-coefficients-table td:first-child {
+  color:
+    #10213e;
+
+  font-weight:
+    700;
+}
+/* ========================================
+   SIGNIFICANCE
+======================================== */
+
+.significance-value {
+  color:
+    #13ad68 !important;
+
+  font-size:
+    18px !important;
+
+  font-weight:
+    800;
+}
+
+
+.significance-note {
+  margin:
+    22px
+    0
+    0;
+
+  color:
+    #7a879d;
+
+  font-size:
+    14px;
+}
+/* ========================================
+   MODEL FIT ASSESSMENT
+======================================== */
+
+.model-fit-card {
+  margin-top: 28px;
+
+  padding: 28px 30px;
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid
+    #dce3ee;
+
+  border-radius:
+    16px;
+
+  box-shadow:
+    0 4px 15px
+    rgba(
+      18,
+      43,
+      84,
+      0.04
+    );
+}
+
+
+.model-fit-heading {
+  display: flex;
+
+  align-items:
+    center;
+
+  gap: 12px;
+}
+
+
+.model-fit-icon {
+  display: flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  width: 38px;
+
+  height: 38px;
+
+  color:
+    #16ad68;
+}
+
+
+.model-fit-heading h2 {
+  margin: 0;
+
+  color:
+    #10213e;
+
+  font-size:
+    21px;
+
+  font-weight:
+    750;
+}
+
+
+.model-fit-card > p {
+  margin:
+    25px
+    0
+    22px;
+
+  color:
+    #435571;
+
+  font-size:
+    15px;
+
+  line-height:
+    1.7;
+}
+
+
+.model-fit-card > p strong {
+  color:
+    #172b4d;
+}
+
+
+/* MODEL-FIT PROGRESS BAR */
+
+.model-fit-progress {
+  width: 100%;
+
+  height: 10px;
+
+  overflow:
+    hidden;
+
+  background:
+    #e7ecf3;
+
+  border-radius:
+    999px;
+}
+
+
+.model-fit-progress-value {
+  height:
+    100%;
+
+  background:
+    #19ad69;
+
+  border-radius:
+    inherit;
+
+  transition:
+    width
+    0.5s ease;
+}
+
+
+.model-fit-scale {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  margin-top:
+    9px;
+
+  color:
+    #8290a7;
+
+  font-size:
+    12px;
+}
+/* ========================================
+   REGRESSION DIAGNOSTIC PLOTS
+======================================== */
+
+.regression-plots-section {
+  margin-top:
+    28px;
+}
+
+
+.regression-plots-section > h2 {
+  margin:
+    0
+    0
+    20px;
+
+  color:
+    #10213e;
+
+  font-size:
+    22px;
+
+  font-weight:
+    750;
+}
+
+
+.regression-plots-grid {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap:
+    24px;
+}
+
+
+.regression-plot-card {
+  padding:
+    25px;
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid
+    #dce3ee;
+
+  border-radius:
+    16px;
+
+  box-shadow:
+    0
+    4px
+    15px
+    rgba(
+      18,
+      43,
+      84,
+      0.04
+    );
+}
+
+
+.regression-plot-heading h3 {
+  margin:
+    0;
+
+  color:
+    #10213e;
+
+  font-size:
+    18px;
+
+  font-weight:
+    750;
+}
+
+
+.regression-plot-heading p {
+  margin:
+    7px
+    0
+    20px;
+
+  color:
+    #7484a0;
+
+  font-size:
+    13px;
+}
+
+
+.regression-svg-chart {
+  display:
+    block;
+
+  width:
+    100%;
+
+  min-height:
+    300px;
+}
+
+
+.regression-grid-line {
+  stroke:
+    #e5eaf2;
+
+  stroke-width:
+    1;
+}
+
+
+.regression-axis-line {
+  stroke:
+    #8796ad;
+
+  stroke-width:
+    1.5;
+}
+
+
+.regression-axis-label {
+  fill:
+    #5e6f8b;
+
+  font-size:
+    13px;
+
+  font-weight:
+    600;
+
+  text-anchor:
+    middle;
+}
+
+
+.regression-fitted-line {
+  fill:
+    none;
+
+  stroke:
+    #ef4444;
+
+  stroke-width:
+    3;
+}
+
+
+.regression-observed-point {
+  fill:
+    #24499e;
+
+  stroke:
+    #ffffff;
+
+  stroke-width:
+    1.5;
+}
+
+
+.regression-residual-point {
+  fill:
+    #24499e;
+
+  stroke:
+    #ffffff;
+
+  stroke-width:
+    1.5;
+}
+
+
+.residual-zero-line {
+  stroke:
+    #ef4444;
+
+  stroke-width:
+    2;
+
+  stroke-dasharray:
+    7
+    6;
+}
+
+
+.regression-chart-legend {
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  gap:
+    25px;
+
+  margin-top:
+    8px;
+
+  color:
+    #5f708c;
+
+  font-size:
+    13px;
+}
+
+
+.regression-chart-legend span {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    8px;
+}
+
+
+.observed-legend-marker {
+  width:
+    10px;
+
+  height:
+    10px;
+
+  background:
+    #24499e;
+
+  border-radius:
+    50%;
+}
+
+
+.fitted-legend-marker {
+  width:
+    25px;
+
+  height:
+    3px;
+
+  background:
+    #ef4444;
+
+  border-radius:
+    4px;
+}
+
+
+.regression-plot-note {
+  margin:
+    12px
+    0
+    0;
+
+  color:
+    #71809a;
+
+  font-size:
+    13px;
+
+  text-align:
+    center;
+}
+
+
+@media (
+  max-width:
+    1100px
+) {
+
+  .regression-plots-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+}
+/* ========================================
+   Q-Q AND SCALE-LOCATION PLOTS
+======================================== */
+
+.qq-reference-line {
+  stroke:
+    #ef4444;
+
+  stroke-width:
+    2.5;
+
+  stroke-dasharray:
+    8
+    6;
+}
+
+
+.qq-plot-point {
+  fill:
+    #24499e;
+
+  stroke:
+    #ffffff;
+
+  stroke-width:
+    1.5;
+}
+
+
+.scale-location-point {
+  fill:
+    #24499e;
+
+  stroke:
+    #ffffff;
+
+  stroke-width:
+    1.5;
+}
+
+
+.scale-location-trend-line {
+  fill:
+    none;
+
+  stroke:
+    #ef4444;
+
+  stroke-width:
+    2.5;
+
+  stroke-linecap:
+    round;
+
+  stroke-linejoin:
+    round;
+
+  opacity:
+    0.8;
+}
+/* ========================================
+   REGRESSION ASSUMPTIONS
+======================================== */
+
+.regression-assumptions-card {
+  margin-top: 28px;
+
+  padding: 30px;
+
+  background:
+    #ffffff;
+
+  border:
+    1px solid
+    #dce3ee;
+
+  border-radius:
+    16px;
+
+  box-shadow:
+    0 4px 15px
+    rgba(
+      18,
+      43,
+      84,
+      0.04
+    );
+}
+
+
+.regression-assumptions-card > h2 {
+  margin:
+    0
+    0
+    24px;
+
+  color:
+    #10213e;
+
+  font-size:
+    22px;
+
+  font-weight:
+    750;
+}
+
+
+.regression-assumptions-grid {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    14px;
+}
+
+
+.assumption-check-item {
+  display:
+    grid;
+
+  grid-template-columns:
+    44px
+    minmax(
+      0,
+      1fr
+    )
+    auto;
+
+  align-items:
+    center;
+
+  gap:
+    16px;
+
+  padding:
+    18px;
+
+  background:
+    #f8fafc;
+
+  border:
+    1px solid
+    #e2e8f0;
+
+  border-radius:
+    12px;
+}
+
+
+.assumption-check-icon {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  width:
+    38px;
+
+  height:
+    38px;
+
+  border-radius:
+    50%;
+
+  font-size:
+    20px;
+
+  font-weight:
+    800;
+}
+
+
+.assumption-check-icon.passed {
+  background:
+    #dcf8e9;
+
+  color:
+    #11995a;
+}
+
+
+.assumption-check-icon.warning {
+  background:
+    #fff1d6;
+
+  color:
+    #d88700;
+}
+
+
+.assumption-check-item h3 {
+  margin:
+    0;
+
+  color:
+    #172b4d;
+
+  font-size:
+    16px;
+}
+
+
+.assumption-check-item p {
+  margin:
+    6px
+    0
+    0;
+
+  color:
+    #6e7f9b;
+
+  font-size:
+    13px;
+
+  line-height:
+    1.5;
+}
+
+
+.assumption-status {
+  padding:
+    7px
+    12px;
+
+  border-radius:
+    999px;
+
+  font-size:
+    12px;
+
+  font-weight:
+    750;
+}
+
+
+.assumption-status.passed {
+  background:
+    #dcf8e9;
+
+  color:
+    #11995a;
+}
+
+
+.assumption-status.warning {
+  background:
+    #fff1d6;
+
+  color:
+    #c67a00;
+}
+
+
+@media (
+  max-width:
+    700px
+) {
+
+  .assumption-check-item {
+    grid-template-columns:
+      44px
+      1fr;
+  }
+
+
+  .assumption-status {
+    grid-column:
+      2;
+  }
+
+}
+/* ========================================
+   ACTUAL VS PREDICTED PLOT
+======================================== */
+
+.actual-predicted-reference-line {
+  stroke:
+    #ef4444;
+
+  stroke-width:
+    2.5;
+
+  stroke-dasharray:
+    8
+    6;
+}
+
+
+.actual-predicted-point {
+  fill:
+    #24499e;
+
+  stroke:
+    #ffffff;
+
+  stroke-width:
+    1.5;
+}
+
+
+.actual-predicted-marker {
+  display:
+    inline-block;
+
+  width:
+    10px;
+
+  height:
+    10px;
+
+  background:
+    #24499e;
+
+  border-radius:
+    50%;
+}
+
+
+.perfect-fit-marker {
+  display:
+    inline-block;
+
+  width:
+    25px;
+
+  height:
+    3px;
+
+  background:
+    #ef4444;
+
+  border-radius:
+    4px;
+}

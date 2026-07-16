@@ -1,0 +1,1454 @@
+/* ==========================================
+   CAPABILITY SIX PACK PAGE
+========================================== */
+
+.capability-six-pack-page {
+  min-height: 100vh;
+  background: #f6f8fc;
+}
+
+.capability-six-pack-content {
+  min-height: 100vh;
+
+  margin-left: 325px;
+
+  padding:
+    100px
+    28px
+    60px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   PAGE HEADING
+========================================== */
+
+.six-pack-page-heading {
+  margin-bottom: 27px;
+}
+
+.six-pack-page-heading h1 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 37px;
+  font-weight: 750;
+
+  line-height: 1.2;
+}
+
+.six-pack-page-heading p {
+  margin: 9px 0 0;
+
+  color: #58709b;
+
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+
+/* ==========================================
+   CONFIGURATION CARD
+========================================== */
+
+.six-pack-configuration-card {
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #dce3ec;
+  border-radius: 18px;
+
+  box-shadow:
+    0 3px 12px
+    rgba(16, 24, 40, 0.035);
+}
+
+.six-pack-configuration-card > h2 {
+  margin:
+    0
+    0
+    27px;
+
+  color: #101828;
+
+  font-size: 23px;
+  font-weight: 750;
+}
+
+
+/* ==========================================
+   INPUT GRIDS
+========================================== */
+
+.six-pack-selection-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 23px;
+}
+
+.six-pack-specification-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 23px;
+}
+
+.six-pack-subgroup-row {
+  max-width: 420px;
+}
+
+
+/* ==========================================
+   INPUT GROUP
+========================================== */
+
+.six-pack-input-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.six-pack-input-group label {
+  color: #172033;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.six-pack-input-group select,
+.six-pack-input-group input {
+  width: 100%;
+  height: 54px;
+
+  padding:
+    0
+    16px;
+
+  box-sizing: border-box;
+
+  color: #101828;
+
+  background: #ffffff;
+
+  border: 1px solid #d2dae6;
+  border-radius: 10px;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.six-pack-input-group select {
+  cursor: pointer;
+}
+
+.six-pack-input-group select:focus,
+.six-pack-input-group input:focus {
+  border-color: #3156b7;
+
+  box-shadow:
+    0
+    0
+    0
+    3px
+    rgba(
+      49,
+      86,
+      183,
+      0.12
+    );
+}
+
+.six-pack-input-group select:disabled {
+  color: #9aa7ba;
+
+  background: #f3f5f8;
+
+  cursor: not-allowed;
+}
+
+.six-pack-input-group input::placeholder {
+  color: #9ba8ba;
+}
+
+.six-pack-input-help {
+  color: #71819b;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* ==========================================
+   SECTION DIVIDER
+========================================== */
+
+.six-pack-section-divider {
+  margin:
+    28px
+    0
+    20px;
+
+  padding-top: 24px;
+
+  border-top: 1px solid #e3e8ef;
+}
+
+.six-pack-section-divider h3 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 17px;
+  font-weight: 750;
+}
+
+
+/* ==========================================
+   GENERATE BUTTON
+========================================== */
+
+.generate-six-pack-button {
+  width: 100%;
+  min-height: 55px;
+
+  margin-top: 29px;
+
+  padding:
+    13px
+    24px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  color: #ffffff;
+
+  background: #29489e;
+
+  border: none;
+  border-radius: 10px;
+
+  font-family: inherit;
+
+  font-size: 16px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.generate-six-pack-button:hover:not(
+  :disabled
+) {
+  background: #203b88;
+
+  transform:
+    translateY(-1px);
+
+  box-shadow:
+    0
+    8px
+    18px
+    rgba(
+      41,
+      72,
+      158,
+      0.2
+    );
+}
+
+.generate-six-pack-button:disabled {
+  background: #9aaad2;
+
+  cursor: not-allowed;
+
+  opacity: 0.78;
+}
+
+
+/* ==========================================
+   ERROR MESSAGE
+========================================== */
+
+.six-pack-error-message {
+  margin-top: 18px;
+
+  padding:
+    14px
+    17px;
+
+  color: #c62828;
+
+  background: #fff1f1;
+
+  border: 1px solid #ffb9b9;
+  border-radius: 10px;
+
+  font-size: 14px;
+}
+
+
+/* ==========================================
+   EMPTY RESULTS
+========================================== */
+
+.six-pack-empty-card {
+  min-height: 330px;
+
+  margin-top: 28px;
+
+  padding: 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #dce3ec;
+  border-radius: 18px;
+}
+
+.six-pack-empty-icon {
+  width: 104px;
+  height: 104px;
+
+  margin-bottom: 22px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #3156b7;
+
+  background: #edf2ff;
+
+  border-radius: 50%;
+}
+
+.six-pack-empty-card h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 24px;
+}
+
+.six-pack-empty-card p {
+  max-width: 610px;
+
+  margin:
+    13px
+    0
+    0;
+
+  color: #617595;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* ==========================================
+   RESULT SECTION
+========================================== */
+
+.six-pack-results {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 28px;
+
+  margin-top: 29px;
+}
+
+
+/* ==========================================
+   CAPABILITY SUMMARY
+========================================== */
+
+.six-pack-summary-card {
+  padding: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef4ff,
+      #ffffff
+    );
+
+  border: 1px solid #b8cbff;
+  border-radius: 18px;
+}
+
+.six-pack-summary-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 27px;
+}
+
+.six-pack-summary-icon {
+  width: 53px;
+  height: 53px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #ffffff;
+
+  background: #29489e;
+
+  border-radius: 14px;
+}
+
+.six-pack-summary-heading h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 23px;
+}
+
+.six-pack-summary-heading p {
+  margin:
+    6px
+    0
+    0;
+
+  color: #58709b;
+
+  font-size: 14px;
+}
+
+
+/* ==========================================
+   CAPABILITY INDEX CARDS
+========================================== */
+
+.six-pack-index-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      6,
+      minmax(0, 1fr)
+    );
+
+  gap: 13px;
+}
+
+.six-pack-index-item {
+  min-height: 132px;
+
+  padding: 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border: 1px solid #d9e1ed;
+  border-radius: 13px;
+
+  box-sizing: border-box;
+}
+
+.six-pack-index-item span {
+  color: #58709b;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.six-pack-index-item strong {
+  margin:
+    12px
+    0
+    8px;
+
+  color: #244496;
+
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.six-pack-index-item small {
+  margin-top: auto;
+
+  color: #71819b;
+
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.six-pack-index-item.sigma {
+  background: #eaf8f0;
+
+  border-color: #b9e8cd;
+}
+
+.six-pack-index-item.sigma
+strong {
+  color: #079455;
+}
+
+
+/* ==========================================
+   MAIN RESULT AREA
+========================================== */
+
+.six-pack-main-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 28px;
+}
+
+.six-pack-chart-area {
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #dce3ec;
+  border-radius: 18px;
+}
+
+.six-pack-chart-heading {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 27px;
+}
+
+.six-pack-chart-heading h2 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 23px;
+}
+
+.six-pack-chart-heading p {
+  max-width: 680px;
+
+  margin:
+    7px
+    0
+    0;
+
+  color: #66799d;
+
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.six-pack-ready-badge {
+  min-height: 38px;
+
+  padding:
+    0
+    14px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  flex-shrink: 0;
+
+  color: #087443;
+
+  background: #e7f8ef;
+
+  border: 1px solid #b9e8cd;
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   SIX GRAPH GRID
+========================================== */
+
+.six-pack-chart-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 22px;
+}
+
+.six-pack-chart-card {
+  min-width: 0;
+
+  padding: 23px;
+
+  background: #ffffff;
+
+  border: 1px solid #dce3ec;
+  border-radius: 15px;
+
+  box-shadow:
+    0
+    2px
+    6px
+    rgba(
+      16,
+      24,
+      40,
+      0.025
+    );
+}
+
+.six-pack-card-title {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+
+  color: #29489e;
+}
+
+.six-pack-card-title h3 {
+  margin: 0;
+
+  color: #101828;
+
+  font-size: 18px;
+}
+
+.six-pack-card-title p {
+  margin:
+    5px
+    0
+    0;
+
+  color: #71819b;
+
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   TEMPORARY GRAPH AREA
+========================================== */
+
+.six-pack-chart-placeholder {
+  min-height: 310px;
+
+  padding: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  text-align: center;
+
+  color: #66799d;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fbfcff,
+      #f5f8fc
+    );
+
+  border: 1px dashed #bdc9d9;
+  border-radius: 13px;
+
+  box-sizing: border-box;
+}
+
+.six-pack-chart-placeholder
+svg {
+  margin-bottom: 12px;
+
+  color: #3156b7;
+}
+
+.six-pack-chart-placeholder
+strong {
+  margin-bottom: 8px;
+
+  color: #101828;
+
+  font-size: 17px;
+}
+
+.six-pack-chart-placeholder
+span {
+  color: #66799d;
+
+  font-size: 13px;
+}
+
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+html.dark
+.capability-six-pack-page,
+
+html.dark
+.capability-six-pack-content {
+  background: #101828;
+}
+
+html.dark
+.six-pack-page-heading h1,
+
+html.dark
+.six-pack-configuration-card > h2,
+
+html.dark
+.six-pack-section-divider h3,
+
+html.dark
+.six-pack-input-group label,
+
+html.dark
+.six-pack-empty-card h2,
+
+html.dark
+.six-pack-summary-heading h2,
+
+html.dark
+.six-pack-chart-heading h2,
+
+html.dark
+.six-pack-card-title h3,
+
+html.dark
+.six-pack-chart-placeholder
+strong {
+  color: #ffffff;
+}
+
+html.dark
+.six-pack-page-heading p,
+
+html.dark
+.six-pack-empty-card p,
+
+html.dark
+.six-pack-summary-heading p,
+
+html.dark
+.six-pack-chart-heading p,
+
+html.dark
+.six-pack-card-title p {
+  color: #aebbd0;
+}
+
+html.dark
+.six-pack-configuration-card,
+
+html.dark
+.six-pack-empty-card,
+
+html.dark
+.six-pack-chart-area,
+
+html.dark
+.six-pack-chart-card {
+  background: #172033;
+
+  border-color: #344054;
+}
+
+html.dark
+.six-pack-input-group select,
+
+html.dark
+.six-pack-input-group input {
+  color: #ffffff;
+
+  background: #202c40;
+
+  border-color: #475467;
+}
+
+html.dark
+.six-pack-input-group
+select:disabled {
+  color: #8391a7;
+
+  background: #192438;
+}
+
+html.dark
+.six-pack-section-divider {
+  border-color: #344054;
+}
+
+html.dark
+.six-pack-summary-card {
+  background:
+    linear-gradient(
+      135deg,
+      #17243b,
+      #172033
+    );
+
+  border-color: #40547c;
+}
+
+html.dark
+.six-pack-index-item {
+  background: #202c40;
+
+  border-color: #475467;
+}
+
+html.dark
+.six-pack-index-item span,
+
+html.dark
+.six-pack-index-item small {
+  color: #aebbd0;
+}
+
+html.dark
+.six-pack-chart-placeholder {
+  background: #202c40;
+
+  border-color: #526177;
+}
+
+html.dark
+.six-pack-chart-placeholder
+span {
+  color: #aebbd0;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (
+  max-width: 1250px
+) {
+
+  .six-pack-index-grid {
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
+  }
+
+}
+
+
+@media (
+  max-width: 1100px
+) {
+
+  .capability-six-pack-content {
+    margin-left: 0;
+
+    padding:
+      95px
+      20px
+      50px;
+  }
+
+}
+
+
+@media (
+  max-width: 850px
+) {
+
+  .six-pack-selection-grid,
+
+  .six-pack-specification-grid,
+
+  .six-pack-chart-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .six-pack-index-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+}
+
+
+@media (
+  max-width: 600px
+) {
+
+  .capability-six-pack-content {
+    padding:
+      85px
+      14px
+      40px;
+  }
+
+  .six-pack-page-heading h1 {
+    font-size: 29px;
+  }
+
+  .six-pack-configuration-card,
+
+  .six-pack-summary-card,
+
+  .six-pack-chart-area {
+    padding: 21px;
+  }
+
+  .six-pack-index-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .six-pack-chart-heading {
+    flex-direction: column;
+  }
+
+}
+/* ==========================================
+   ACTUAL SIX-PACK CHARTS
+========================================== */
+
+.six-pack-actual-chart {
+  width: 100%;
+
+  height: 350px;
+
+  min-width: 0;
+
+  padding:
+    10px
+    5px
+    0;
+
+  box-sizing:
+    border-box;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #fbfcff
+    );
+
+  border:
+    1px solid
+    #e1e7ef;
+
+  border-radius:
+    13px;
+}
+
+
+/* Recharts text */
+
+.six-pack-actual-chart
+.recharts-text {
+  font-family:
+    inherit;
+
+  font-size:
+    12px;
+}
+
+
+/* Dark mode */
+
+html.dark
+.six-pack-actual-chart {
+  background:
+    #202c40;
+
+  border-color:
+    #475467;
+}
+
+html.dark
+.six-pack-actual-chart
+.recharts-cartesian-grid
+line {
+  stroke:
+    #475467;
+}
+
+html.dark
+.six-pack-actual-chart
+.recharts-text {
+  fill:
+    #cbd5e1;
+}
+/* ==========================================
+   MINITAB-STYLE CAPABILITY PLOT
+========================================== */
+
+.six-pack-capability-chart {
+  min-height: 350px;
+
+  padding: 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 24px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #f8faff
+    );
+
+  border: 1px solid #e1e7ef;
+
+  border-radius: 13px;
+
+  box-sizing: border-box;
+}
+
+
+/* TOP SCALE */
+
+.capability-plot-scale {
+  margin-left: 125px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #66799d;
+
+  font-size: 11px;
+}
+
+
+/* EACH CAPABILITY ROW */
+
+.capability-plot-row {
+  display: grid;
+
+  grid-template-columns:
+    105px
+    minmax(
+      0,
+      1fr
+    );
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+.capability-plot-label {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.capability-plot-label strong {
+  color: #101828;
+
+  font-size: 14px;
+}
+
+
+.capability-plot-label span {
+  color: #71819b;
+
+  font-size: 10px;
+}
+
+
+/* RANGE AREA */
+
+.capability-range-area {
+  min-width: 0;
+
+  position: relative;
+
+  padding:
+    22px
+    0;
+}
+
+
+/* RANGE LINES */
+
+.specification-range-line,
+.within-range-line,
+.overall-range-line {
+  width: 100%;
+
+  height: 4px;
+
+  position: relative;
+
+  border-radius: 10px;
+}
+
+
+.specification-range-line {
+  background: #dc2626;
+}
+
+
+.within-range-line {
+  width: 72%;
+
+  margin:
+    0
+    auto;
+
+  background: #244496;
+}
+
+
+.overall-range-line {
+  width: 82%;
+
+  margin:
+    0
+    auto;
+
+  background: #f59e0b;
+}
+
+
+/* END MARKERS */
+
+.range-end {
+  width: 3px;
+
+  height: 22px;
+
+  position: absolute;
+
+  top: 50%;
+
+  background:
+    currentColor;
+
+  border-radius: 3px;
+
+  transform:
+    translateY(
+      -50%
+    );
+}
+
+
+.left-end {
+  left: 0;
+}
+
+
+.right-end {
+  right: 0;
+}
+
+
+/* CENTRE MARKERS */
+
+.range-center {
+  width: 12px;
+
+  height: 12px;
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  border: 3px solid #ffffff;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0
+    0
+    0
+    1px
+    rgba(
+      16,
+      24,
+      40,
+      0.2
+    );
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    );
+}
+
+
+.target-center {
+  background: #dc2626;
+}
+
+
+.mean-center {
+  background: #16a34a;
+}
+
+
+/* RANGE VALUES */
+
+.capability-left-value,
+.capability-center-value,
+.capability-right-value {
+  position: absolute;
+
+  bottom: -3px;
+
+  color: #66799d;
+
+  font-size: 10px;
+}
+
+
+.capability-left-value {
+  left: 0;
+}
+
+
+.capability-center-value {
+  left: 50%;
+
+  transform:
+    translateX(
+      -50%
+    );
+}
+
+
+.capability-right-value {
+  right: 0;
+}
+
+
+/* CAPABILITY INDEX BOXES */
+
+.capability-plot-indices {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap: 10px;
+
+  margin-top: 4px;
+}
+
+
+.capability-plot-indices > div {
+  padding:
+    10px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: #edf2ff;
+
+  border: 1px solid #d6e0ff;
+
+  border-radius: 8px;
+}
+
+
+.capability-plot-indices span {
+  color: #58709b;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+.capability-plot-indices strong {
+  color: #244496;
+
+  font-size: 14px;
+}
+
+
+/* DARK MODE */
+
+html.dark
+.six-pack-capability-chart {
+  background: #202c40;
+
+  border-color: #475467;
+}
+
+
+html.dark
+.capability-plot-label
+strong {
+  color: #ffffff;
+}
+
+
+html.dark
+.capability-plot-label
+span,
+
+html.dark
+.capability-plot-scale,
+
+html.dark
+.capability-left-value,
+
+html.dark
+.capability-center-value,
+
+html.dark
+.capability-right-value {
+  color: #aebbd0;
+}
+
+
+html.dark
+.capability-plot-indices
+> div {
+  background: #17243b;
+
+  border-color: #40547c;
+}
+
+
+/* MOBILE */
+
+@media (
+  max-width: 600px
+) {
+
+  .six-pack-capability-chart {
+    padding: 18px;
+  }
+
+
+  .capability-plot-row {
+    grid-template-columns:
+      78px
+      minmax(
+        0,
+        1fr
+      );
+
+    gap: 12px;
+  }
+
+
+  .capability-plot-scale {
+    margin-left: 90px;
+  }
+
+
+  .capability-plot-indices {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(
+          0,
+          1fr
+        )
+      );
+  }
+
+}
